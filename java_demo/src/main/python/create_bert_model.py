@@ -9,6 +9,9 @@
 import tensorflow as tf
 from transformers import TFAutoModel
 from tqdm import tqdm
+import os
+
+os.environ["CUDA_VISIBLE_DEVICES"] = "6"
 
 
 class MyMode(tf.keras.Model):
