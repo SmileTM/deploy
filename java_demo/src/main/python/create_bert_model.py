@@ -33,6 +33,6 @@ if __name__ == '__main__':
     model = MyMode()
     out = model((data, data, data))
     print(out)
-    model.save("../testBert")
+    model.save("../resources/testBert")
     for i in tqdm(range(50)):
         model((data, data, data))
