@@ -14,10 +14,9 @@
     </properties>
 
     <dependencies>
-        <!--加载tensorflow依赖-->
         <dependency>
             <groupId>org.tensorflow</groupId>
-            <artifactId>tensorflow-core-platform</artifactId>
+            <artifactId>tensorflow-core-platform-gpu</artifactId>
             <version>0.4.1</version>
         </dependency>
         <!--加载djl依赖-->
