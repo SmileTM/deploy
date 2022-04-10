@@ -19,7 +19,7 @@ public class LoadBertModelByDJL {
                 .setTypes(NDList.class, NDList.class)
                 .optModelUrls("src/main/resources/testBert")
                 .optEngine("TensorFlow")
-                .optDevice(Device.cpu())
+                .optDevice(Device.gpu())
                 .optProgress(new ProgressBar())
                 .build();
         ZooModel<NDList, NDList> model1 = criteria.loadModel();
@@ -42,11 +42,11 @@ public class LoadBertModelByDJL {
         System.out.println("预测结果为：" + Arrays.toString(res.get("output_1").toArray()));
 
         Long start = System.currentTimeMillis();
-        for (int i = 0; i < 50; i++) {
+        for (int i = 0; i < 100; i++) {
             predictor.predict(inputs);
         }
         Long end = System.currentTimeMillis();
-        System.out.println("循环50次 耗时：");
+        System.out.println("循环100次 耗时：");
         System.out.println((end - start) / 1000.);
 
 

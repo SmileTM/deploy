@@ -47,11 +47,11 @@ public class LoadBertModel {
 
 
         Long start = System.currentTimeMillis();
-        for (int i = 0; i < 50; i++) {
+        for (int i = 0; i < 100; i++) {
             model.call(inputs);
         }
         Long end = System.currentTimeMillis();
-        System.out.println("循环50次 耗时：");
+        System.out.println("循环100次 耗时：");
         System.out.println((end - start) / 1000.);
 
     }
