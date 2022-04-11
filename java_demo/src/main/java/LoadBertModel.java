@@ -104,7 +104,11 @@ public class LoadBertModel {
             inputs.put("input_1", data1);
             inputs.put("input_2", data2);
             inputs.put("input_3", data3);
-            model.call(inputs);
+            result = model.call(inputs);
+            data1.close();
+            data2.close();
+            data3.close();
+            result.get("output_1").close();
 
         }
         Long end = System.currentTimeMillis();
