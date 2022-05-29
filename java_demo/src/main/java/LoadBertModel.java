@@ -86,9 +86,9 @@ public class LoadBertModel {
             raw_data2 = new long[512];
             raw_data3 = new long[512];
             for (int j = 0; j < 512; j++) {
-                raw_data1[j] = i;
-                raw_data2[j] = i;
-                raw_data3[j] = i;
+                raw_data1[j] = 1;
+                raw_data2[j] = 1;
+                raw_data3[j] = 1;
             }
             x1 = NdArrays.vectorOf(raw_data1);
             x2 = NdArrays.vectorOf(raw_data2);
